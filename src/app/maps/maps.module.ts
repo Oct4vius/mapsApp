@@ -11,6 +11,7 @@ import { PropertiesPageComponent } from './pages/properties-page/properties-page
 import { ZoomRangePageComponent } from './pages/zoom-range-page/zoom-range-page.component';
 import { SideMenuComponent } from './components/side-menu/side-menu.component';
 import { MiniMapComponent } from './components/mini-map/mini-map.component';
+import { CounterComponent } from '../alone/components/counter/counter.component';
 
 
 @NgModule({
@@ -25,7 +26,10 @@ import { MiniMapComponent } from './components/mini-map/mini-map.component';
   ],
   imports: [
     CommonModule,
-    MapsRoutingModule
+    MapsRoutingModule,
+
+    
+    CounterComponent
   ]
 })
 export class MapsModule { }

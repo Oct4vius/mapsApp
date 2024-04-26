@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { LngLat, Map, Marker } from 'mapbox-gl';
 import { MarkerAndColor, PlainMarker } from '../../interfaces/maps.interfaces';
+import { enviroments } from '../../../../environments/environments';
 
 @Component({
   templateUrl: './markers-page.component.html',
@@ -23,8 +24,7 @@ export class MarkersPageComponent implements AfterViewInit {
     if (!this.divmap) throw 'El elemento HTML no fue encontrado';
 
     this.map = new Map({
-      accessToken:
-        'pk.eyJ1IjoiYXJtYW5kbzIzMyIsImEiOiJjbHZmYnIxZG4wMDNlMm1rNDhtenc3dW1rIn0.eb0O8zQGKgHbvDLLxd1Oiw',
+      accessToken: enviroments.mapbox_key,
       container: this.divmap.nativeElement, // container ID
       style: 'mapbox://styles/mapbox/streets-v12', // style URL
       center: this.currentCenter, // starting position [lng, lat]

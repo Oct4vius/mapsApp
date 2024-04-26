@@ -6,6 +6,10 @@ const routes: Routes = [
     path: 'maps',
     loadChildren: () => import('./maps/maps.module').then(m => m.MapsModule),
   },
+  {
+    path: 'alone',
+    loadChildren: () => import('./alone/pages/alone/alone.component').then(m => m.AloneComponent),
+  },
   { path: '**', redirectTo: 'maps' }
 ];
 
